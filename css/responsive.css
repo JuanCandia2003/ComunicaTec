@@ -1,0 +1,67 @@
+/* responsive.css - Estilos para diseño adaptable */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Móviles grandes */
+@media screen and (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Móviles pequeños */
+@media screen and (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .featured-posts, .older-posts {
+        padding: 1rem 0;
+    }
+
+    .article-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ajustes de altura para diferentes dispositivos */
+@media screen and (max-height: 600px) {
+    .main-header {
+        position: relative;
+    }
+}
+
+/* Ajustes para dispositivos de alta resolución */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Optimizaciones para pantallas retina */
+    .logo img {
+        transform: scale(0.5);
+    }
+}

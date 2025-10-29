@@ -1,0 +1,83 @@
+/* styles.css - Estilos generales del sitio */
+
+/* Variables globales */
+:root {
+    --primary-color: #156fc9;
+    --secondary-color: #f32008;
+    --text-color: #000;
+    --background-color1: #fff;
+    --accent-color: #3498DB;
+    --font-main: 'Roboto', sans-serif;
+    --font-headers: 'Montserrat', sans-serif;
+}
+
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color1);
+    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+}
+
+/* Contenedores principales */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Secciones de artículos */
+.featured-posts {
+    padding: 2rem 0;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Artículos */
+.article-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headers);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Enlaces */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deportes - ComunicaTec</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado con logo y título -->
+        <header>
+            <div class="logo">
+                <img src="https://ucatec.edu.bo/images/LogoCompleto-UCATEC.png" alt="Logo UCATEC">
+            </div>
+        </header>
+        
+        <!-- Sección de historias/stories -->
+        <div class="stories-container">
+            <!-- Cada story representa una opción del menú -->
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="../index.html">🏠</a></div>
+                </div>
+                <div class="story-name"><a href="../index.html">Inicio</a></div>                
+            </div>
+             
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="noticias.html">📰</a></div>
+                </div>
+                <div class="story-name"><a href="noticias.html">Noticias</a></div>                
+            </div>
+             
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="deportes.html">⚽</a></div>
+                </div>
+                <div class="story-name"><a href="deportes.html">Deportes</a></div>                
+            </div>
+           
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="cultura.html">🎨</a></div>
+                </div>
+                <div class="story-name"><a href="cultura.html">Cultura</a></div>                
+            </div>
+
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="galeria.html">🖼️</a></div>
+                </div>
+                <div class="story-name"><a href="galeria.html">Galería</a></div>                
+            </div>
+
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="contacto.html">📞</a></div>
+                </div>
+                <div class="story-name"><a href="contacto.html">Contacto</a></div>                
+            </div>
+        </div>
+        <!-- Contenedor principal de publicaciones (se llenará con JS) -->
+        <div class="posts-container" id="posts-container">
+            <!-- El contenido de deportes se cargará aquí dinámicamente -->
+        </div>
+    </div>
+    <!-- Script para filtrar y cargar las publicaciones de la categoría 'deportes' -->
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js" data-category="deportes" defer></script>
+</body>
+</html>

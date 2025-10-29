@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComunicaTec - Periódico Estudiantil</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado con logo y título -->
+        <header>
+            <div class="logo">
+                <img src="https://ucatec.edu.bo/images/LogoCompleto-UCATEC.png">
+            </div>
+        </header>
+        
+        <!-- Sección de historias/stories -->
+        <div class="stories-container">
+            <!-- Cada story representa una opción del menú -->
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="index.html">🏠</a></div>
+                </div>
+                <div class="story-name"><a href="index.html">Inicio</a></div>                
+            </div>
+             
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="pages/noticias.html">📰</a></div>
+                </div>
+                <div class="story-name"><a href="pages/noticias.html">Noticias</a></div>                
+            </div>
+             
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="pages/deportes.html">⚽</a></div>
+                </div>
+                <div class="story-name"><a href="pages/deportes.html">Deportes</a></div>                
+            </div>
+           
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="pages/cultura.html">🎨</a></div>
+                </div>
+                <div class="story-name"><a href="pages/cultura.html">Cultura</a></div>                
+            </div>
+
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="pages/galeria.html">🖼️</a></div>
+                </div>
+                <div class="story-name"><a href="pages/galeria.html">Galería</a></div>                
+            </div>
+
+            <div class="story">                   
+                <div class="story-circle">
+                    <div class="story-inner"><a href="pages/contacto.html">📞</a></div>
+                </div>
+                <div class="story-name"><a href="pages/contacto.html">Contacto</a></div>                
+            </div>
+        </div>
+
+        <!-- Contenedor principal de publicaciones -->
+        <div class="posts-container" id="posts-container">
+            <!-- Las publicaciones se cargarán aquí dinámicamente -->
+        </div>
+    </div>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

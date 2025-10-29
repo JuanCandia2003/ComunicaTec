@@ -1,0 +1,199 @@
+/**
+ * Hoja de estilos para la aplicación B/A - Periódico Estudiantil
+ * Diseño inspirado en Instagram adaptado para contenido universitario
+ */
+
+/* Variables CSS para mantener consistencia en colores y estilos */
+/*:root {
+    --primary-color: #405DE6;
+    --secondary-color: #f5f3f3;
+    --accent-color: #df0813;
+    --text-color: #262626;
+    --light-gray: #fafafa;
+    --border-color: #dbdbdb;
+}*/
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+/* Contenedor principal con ancho máximo para dispositivos móviles */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado con logo y título */
+header {
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Contenedor de historias con scroll horizontal */
+.stories-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+/* Estilos para cada elemento de historia */
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+    text-decoration: none;
+}
+
+.story a {
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit; /* Hereda el color del texto para que no se vea azul */
+}
+
+/* Círculo exterior de la historia con gradiente */
+.story-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* Círculo interior de la historia */
+.story-inner {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.story-name {
+    font-size: 12px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Estilos para cada publicación/post */
+.post {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Encabezado de la publicación con avatar e información */
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.post-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.post-info {
+    flex: 1;
+}
+
+.post-author {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.post-date {
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+/* Área de imagen de la publicación */
+.post-image {
+    width: 100%;
+    height: 400px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #8e8e8e;
+}
+
+/* Sección de acciones (solo like) */
+.post-actions {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* Botón de like con estados */
+.like-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #262626;
+}
+
+.like-btn.liked {
+    color: #ed4956;
+}
+
+.likes-count {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Descripción de la publicación */
+.post-description {
+    padding: 0 15px 15px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.post-description .author {
+    font-weight: bold;
+    margin-right: 5px;
+}
