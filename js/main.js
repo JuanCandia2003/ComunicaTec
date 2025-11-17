@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- MANEJO DEL MENÚ HAMBURGUESA ---
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const sidebarMenu = document.querySelector('.sidebar-menu');
+
+    if (hamburgerButton && sidebarMenu) {
+        hamburgerButton.addEventListener('click', () => {
+            sidebarMenu.classList.toggle('is-active');
+        });
+    }
+
     // --- INICIALIZACIÓN ---
     const scriptTag = document.querySelector('script[data-category]');
     const categoryToFilter = scriptTag ? scriptTag.getAttribute('data-category') : 'all';
@@ -26,7 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const filteredPosts = (category === 'all') ? postsData : postsData.filter(post => post.category === category);
+        let filteredPosts;
+        if (category === 'all') {
+            filteredPosts = postsData;
+        } else if (category === 'arte-y-cultura') {
+            filteredPosts = postsData.filter(post => ['cultural-artistico', 'grafica-ilustracion', 'actividades'].includes(post.category));
+        } else {
+            filteredPosts = postsData.filter(post => post.category === category);
+        }
 
         if (filteredPosts.length === 0) {
             container.innerHTML = `<p>No hay publicaciones en esta categoría.</p>`;
@@ -46,9 +63,20 @@ document.addEventListener('DOMContentLoaded', () => {
         post.className = 'post';
         post.dataset.category = postData.category;
 
+        // Determina si imageText es una URL de imagen o texto plano
+        let imageContent;
+        // Una simple comprobación para ver si la cadena parece una URL
+        if (postData.imageText && (postData.imageText.startsWith('http') || postData.imageText.startsWith('https'))) {
+            // Si es una URL, crea una etiqueta de imagen
+            imageContent = `<img src="${postData.imageText}" alt="${postData.description.substring(0, 50)}...">`;
+        } else {
+            // Si no, úsalo como texto plano (comportamiento anterior)
+            imageContent = postData.imageText;
+        }
+
         post.innerHTML = `
             <div class="post-header"><div class="post-avatar">${postData.avatar}</div><div class="post-info"><div class="post-author">${postData.author}</div><div class="post-date"></div></div></div>
-            <div class="post-image">${postData.imageText}</div>
+            <div class="post-image">${imageContent}</div>
             <div class="post-actions"><button class="like-btn">🤍</button><span class="likes-count">${postData.likes} Me gusta</span></div>
             <div class="post-description"><span class="author">${postData.author}</span> ${postData.description}</div>
         `;

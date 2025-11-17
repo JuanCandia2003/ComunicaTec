@@ -13,10 +13,12 @@ El sitio web está organizado en las siguientes secciones principales:
 
 2. **Secciones Principales**
    - Noticias
-   - Deportes
-   - Cultura
-   - Opinión
-   - Contacto
+   - Académico
+   - Emprendedor
+   - Arte y cultura (con filtros para cultural artístico, gráfica e ilustración, y actividades)
+   - Comunidad
+   - Ruby tips
+   - Equipo comunicatec
 
 ## Características Principales
 

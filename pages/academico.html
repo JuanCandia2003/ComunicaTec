@@ -3,67 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ComunicaTec - Periódico Estudiantil</title>
+    <title>Académico - ComunicaTec</title>
     <!-- Enlace al archivo CSS externo -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <meta name="description" content="Últimas noticias y comunicados de la comunidad UCATEC.">
 </head>
-<body>
+<body>        
     <button class="hamburger-button">☰</button>
 
     <nav class="sidebar-menu">
         <!-- Menú de navegación -->
         <div class="stories-container">
-            <a href="index.html" class="story">                   
+            <a href="../index.html" class="story">                   
                 <div class="story-circle"><div class="story-inner">🏠</div></div>
                 <span class="story-name">Inicio</span>
             </a>
-            <a href="pages/academico.html" class="story">                   
+            <a href="academico.html" class="story">                   
                 <div class="story-circle"><div class="story-inner">🎓</div></div>
                 <span class="story-name">Académico</span>
             </a>
-            <a href="pages/emprendedor.html" class="story">                   
+            <a href="emprendedor.html" class="story">                   
                 <div class="story-circle"><div class="story-inner">💡</div></div>
                 <span class="story-name">Emprendedor</span>
             </a>
-            <a href="pages/arte-y-cultura.html" class="story">                   
+            <a href="arte-y-cultura.html" class="story">                   
                 <div class="story-circle"><div class="story-inner">🎨</div></div>
                 <span class="story-name">Arte y Cultura</span>
             </a>
-            <a href="pages/comunidad.html" class="story">                   
+            <a href="comunidad.html" class="story">                   
                 <div class="story-circle"><div class="story-inner">👥</div></div>
                 <span class="story-name">Comunidad</span>
             </a>
-            <a href="pages/ruby-tips.html" class="story">                   
+            <a href="ruby-tips.html" class="story">                   
                 <div class="story-circle"><div class="story-inner">💎</div></div>
                 <span class="story-name">Ruby tips</span>
             </a>
-            <a href="pages/equipo-comunicatec.html" class="story">                   
+            <a href="equipo-comunicatec.html" class="story">                   
                 <div class="story-circle"><div class="story-inner">👨‍💻</div></div>
                 <span class="story-name">Equipo</span>
             </a>
         </div>
     </nav>
-
-    <div class="main-content">
+        <!-- Contenedor principal de publicaciones (se llenará con JS) -->
+         <div class="main-content">
         <div class="container">
             <header>
                 <div class="logo">
                     <img src="https://ucatec.edu.bo/images/LogoCompleto-UCATEC.png">
                 </div>
             </header>
-    
-            <!-- Contenedor principal de publicaciones -->
-            <div class="posts-container" id="posts-container">
-                <!-- Las publicaciones se cargarán aquí dinámicamente -->
-            </div>
+            <div class="posts-container" id="posts-container">        
+                <!-- El contenido académico se cargará aquí dinámicamente -->
+            </div>            
         </div>
+        </div>
+        
     </div>
-
-    <!-- Enlace al archivo JavaScript externo -->
-    <script src="js/data.js"></script>
-    <script src="js/main.js" defer></script>
+    <!-- Script para filtrar y cargar las publicaciones de la categoría 'academico' -->
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js" data-category="academico" defer></script>
 </body>
 </html>

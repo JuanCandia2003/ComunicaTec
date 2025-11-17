@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad - ComunicaTec</title>
+    <meta name="description" content="Eventos y noticias de la comunidad UCATEC.">
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+        <button class="hamburger-button">☰</button>
+
+        <nav class="sidebar-menu">
+            <!-- Menú de navegación -->
+            <div class="stories-container">
+                <a href="../index.html" class="story">                   
+                    <div class="story-circle"><div class="story-inner">🏠</div></div>
+                    <span class="story-name">Inicio</span>
+                </a>
+                <a href="academico.html" class="story">                   
+                    <div class="story-circle"><div class="story-inner">🎓</div></div>
+                    <span class="story-name">Académico</span>
+                </a>
+                <a href="emprendedor.html" class="story">                   
+                    <div class="story-circle"><div class="story-inner">💡</div></div>
+                    <span class="story-name">Emprendedor</span>
+                </a>
+                <a href="arte-y-cultura.html" class="story">                   
+                    <div class="story-circle"><div class="story-inner">🎨</div></div>
+                    <span class="story-name">Arte y Cultura</span>
+                </a>
+                <a href="comunidad.html" class="story">                   
+                    <div class="story-circle"><div class="story-inner">👥</div></div>
+                    <span class="story-name">Comunidad</span>
+                </a>
+                <a href="ruby-tips.html" class="story">                   
+                    <div class="story-circle"><div class="story-inner">💎</div></div>
+                    <span class="story-name">Ruby tips</span>
+                </a>
+                <a href="equipo-comunicatec.html" class="story">                   
+                    <div class="story-circle"><div class="story-inner">👨‍💻</div></div>
+                    <span class="story-name">Equipo</span>
+                </a>
+            </div>
+        </nav>
+        <div class="main-content">
+            <div class="container">
+                <header>
+                    <div class="logo">
+                        <img src="https://ucatec.edu.bo/images/LogoCompleto-UCATEC.png">
+                    </div>
+                </header>
+                <!-- Contenedor principal de publicaciones (se llenará con JS) -->
+                <div class="posts-container" id="posts-container">
+                <!-- El contenido de comunidad se cargará aquí dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>        
+    <!-- Script para filtrar y cargar las publicaciones de la categoría 'comunidad' -->
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js" data-category="comunidad" defer></script>
+</body>
+</html>

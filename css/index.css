@@ -3,16 +3,6 @@
  * Diseño inspirado en Instagram adaptado para contenido universitario
  */
 
-/* Variables CSS para mantener consistencia en colores y estilos */
-/*:root {
-    --primary-color: #405DE6;
-    --secondary-color: #f5f3f3;
-    --accent-color: #df0813;
-    --text-color: #262626;
-    --light-gray: #fafafa;
-    --border-color: #dbdbdb;
-}*/
-
 /* Reset y estilos base */
 * {
     margin: 0;
@@ -26,84 +16,87 @@ body {
     color: var(--text-color);
 }
 
-/* Contenedor principal con ancho máximo para dispositivos móviles */
+/* Contenedor principal con ancho máximo y margen para el menú lateral */
 .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    margin-left: 400px; /* Espacio para el menú lateral */
+    transition: margin-left 0.3s ease-in-out;
 }
 
-/* Encabezado con logo y título */
+/* Header visible de nuevo */
 header {
     display: flex;
-    justify-content: center; /* Centra el logo horizontalmente */
+    justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 20px;
+    padding: 0;
+    margin-bottom: 15px;
 }
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--text-color);
+.logo{
+    max-height: 250px;
+    height: 100%;
+    max-width: 500px; /* Aumentamos el ancho máximo para que el logo sea más grande y alto */
+    width: 100%;      /* Ocupa el espacio disponible hasta el máximo */
 }
-
-/* Contenedor de historias con scroll horizontal */
+.logo img {
+    width: 100%; /* El logo ocupará todo el ancho disponible */
+    height: auto; /* La altura se ajustará automáticamente */
+}
+/* Contenedor de historias ahora es un menú vertical */
 .stories-container {
     display: flex;
-    overflow-x: auto;
-    padding: 15px 10px;
-    margin-bottom: 20px;
-    gap: 15px;
+    flex-direction: column; /* Apila los items verticalmente */
+    gap: 15px; /* Aumenta el espaciado */
+    padding: 10px 0;
 }
 
-/* Estilos para cada elemento de historia */
+/* Estilos para cada elemento de historia/menú (que ahora es un <a>) */
 .story {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    min-width: 70px;
     text-decoration: none;
+    color: inherit; 
+    gap: 12px; /* Espacio entre icono y texto */
+    width: 100%;
+    padding: 8px 10px; /* Padding para alinear y dar espacio */
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
 }
 
-.story a {
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: inherit; /* Hereda el color del texto para que no se vea azul */
+.story:hover {
+    background-color: #f0f0f0;
 }
 
 /* Círculo exterior de la historia con gradiente */
 .story-circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 40px; /* Más pequeño para el menú */
+    height: 40px;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5px;
+    clip-path: path('M 20 0 A 40 40 0 0 0 0 34.64 A 40 40 0 0 0 40 34.64 A 40 40 0 0 0 20 0 Z');
+    flex-shrink: 0; /* Evita que el círculo se encoja */
 }
 
 /* Círculo interior de la historia */
 .story-inner {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
+    width: 36px;
+    height: 36px;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    color: var(--text-color);
-    text-decoration: none;
+    font-size: 20px;
+    clip-path: path('M 18 0 A 36 36 0 0 0 0 31.176 A 36 36 0 0 0 36 31.176 A 36 36 0 0 0 18 0 Z');
 }
 
 .story-name {
-    font-size: 12px;
+    font-size: 16px; /* Texto más grande para el menú */
+    font-weight: 500;
     color: var(--text-color);
-    text-decoration: none;
 }
 
 /* Estilos para cada publicación/post */
@@ -132,6 +125,7 @@ header {
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    color: var(--primary-color);
 }
 
 .post-info {
@@ -160,6 +154,15 @@ header {
     color: #8e8e8e;
 }
 
+/* Estilos para la imagen dentro del post-image */
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    display: block; /* Elimina cualquier espacio extra debajo de la imagen */
+}
+
+
 /* Sección de acciones (solo like) */
 .post-actions {
     padding: 10px 15px;
@@ -174,11 +177,11 @@ header {
     font-size: 24px;
     cursor: pointer;
     margin-right: 10px;
-    color: #262626;
+    color: var(--primary-color);
 }
 
 .like-btn.liked {
-    color: #ed4956;
+    color: var(--secondary-color);
 }
 
 .likes-count {

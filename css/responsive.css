@@ -12,14 +12,29 @@
     }
 }
 
-/* Móviles grandes */
+/* Móviles grandes y Tablets en vertical - Aquí ocultamos el menú */
 @media screen and (max-width: 768px) {
-    .posts-grid {
-        grid-template-columns: 1fr;
+    .sidebar-menu {        
+        transform: translateX(-100%); /* Oculta el menú a la izquierda */
+    }
+    .stories-container{
+        margin-top: 50px;
+    }
+    .sidebar-menu.is-active {
+        transform: translateX(0); /* Muestra el menú */
+    }
+
+    .hamburger-button {
+        display: block; /* Muestra el botón de hamburguesa */
     }
 
     .container {
+        margin-left: 0; /* El contenido principal ocupa todo el ancho */
         padding: 0 15px;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
     }
 
     h1 {
@@ -28,6 +43,22 @@
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    .posts-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .post {
+        border: none;
+        border-radius: 0;
+        margin-bottom: 15px;
+    }
+
+    .post-image {
+        height: auto;
+        aspect-ratio: 1 / 1;
     }
 }
 
@@ -39,7 +70,11 @@
     }
 
     .logo {
-        margin-bottom: 1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    header .logo img {
+        max-height: 200px;
     }
 
     .featured-posts, .older-posts {
@@ -48,6 +83,23 @@
 
     .article-card {
         margin-bottom: 1rem;
+    }
+
+    .post-header {
+        padding: 8px 12px;
+    }
+
+    .post-avatar {
+        width: 28px;
+        height: 28px;
+    }
+
+    .post-author {
+        font-size: 13px;
+    }
+
+    .post-date {
+        font-size: 11px;
     }
 }
 
